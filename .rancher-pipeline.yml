@@ -3,6 +3,21 @@ stages:
   steps:
   - runScriptConfig:
       image: gcc:latest
-      shellScript: make
+      shellScript: make step-1
+- name: step2
+  steps:
+  - runScriptConfig:
+      image: gcc:latest
+      shellScript: make step-2
+- name: step-3
+  steps:
+  - runScriptConfig:
+      image: gcc:latest
+      shellScript: make step-3
+- name: step-4
+  steps:
+  - runScriptConfig:
+      image: gcc:latest
+      shellScript: make step-4
 timeout: 60
 notification: {}
