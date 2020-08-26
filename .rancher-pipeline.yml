@@ -3,6 +3,11 @@ stages:
   steps:
   - runScriptConfig:
       image: gcc:latest
+      shellScript: |-
+        curl -s "https://raw.githubusercontent.com/\
+        kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+  - runScriptConfig:
+      image: gcc:latest
       shellScript: make step-1
 - name: step2
   steps:
