@@ -1,0 +1,8 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: gcc:latest
+      shellScript: make
+timeout: 60
+notification: {}
